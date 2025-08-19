@@ -8,6 +8,7 @@
   "devDependencies": {
     "@nx/js": "21.4.0",
     "@nx/workspace": "21.4.0",
-    "nx": "21.4.0"
+    "nx": "21.4.0",
+    "qwik-nx": "^3.2.1"
   }
 }
