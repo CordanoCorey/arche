@@ -1,7 +1,7 @@
 {
-  "name": "bible",
+  "name": "convex-qwik",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/bible/src",
+  "sourceRoot": "libs/convex-qwik/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -13,13 +13,15 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/bible",
-        "main": "libs/bible/src/index.ts",
-        "tsConfig": "libs/bible/tsconfig.lib.json",
-        "assets": []
+        "outputPath": "dist/libs/convex-qwik",
+        "main": "libs/convex-qwik/src/index.ts",
+        "tsConfig": "libs/convex-qwik/tsconfig.lib.json",
+        "assets": [],
+        "format": ["cjs"],
+        "generatePackageJson": true
       }
     },
     "nx-release-publish": {
