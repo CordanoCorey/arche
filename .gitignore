@@ -1,15 +1,61 @@
-# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
-# compiled output
+# ────────────────
+# BUILD OUTPUT
+# ────────────────
 dist
 tmp
 out-tsc
+/lib
+/lib-types
+/server
 
-# dependencies
+# ────────────────
+# DEPENDENCIES
+# ────────────────
 node_modules
 
-# IDEs and editors
-/.idea
+# ────────────────
+# ENV / LOCAL CONFIG
+# ────────────────
+.env
+*.local
+
+# ────────────────
+# CACHE
+# ────────────────
+.cache
+.mf
+.rollup.cache
+tsconfig.tsbuildinfo
+.nx/cache
+.nx/workspace-data
+.vite/*.timestamp*
+vite.config.*.timestamp*
+vitest.config.*.timestamp*
+
+# ────────────────
+# LOGS
+# ────────────────
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+testem.log
+/libpeerconnection.log
+
+# ────────────────
+# IDE / EDITORS
+# ────────────────
+.idea
+.DS_Store
+Thumbs.db
+.suo
+.ntvs*
+.njsproj
+.sln
+.sw?
 .project
 .classpath
 .c9/
@@ -17,31 +63,28 @@ node_modules
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
+# ────────────────
+# VS CODE
+# ────────────────
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/*.code-snippets
 
-# misc
+# ────────────────
+# PACKAGE MANAGERS
+# ────────────────
+.yarn/*
+!.yarn/releases
+
+# ────────────────
+# OTHER
+# ────────────────
 /.sass-cache
-/connect.lock
 /coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
 /typings
-
-# System Files
-.DS_Store
-Thumbs.db
-
-.nx/cache
-.nx/workspace-data
+/connect.lock
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
-
-vite.config.*.timestamp*
-vitest.config.*.timestamp*
